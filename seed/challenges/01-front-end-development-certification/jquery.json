@@ -928,7 +928,6 @@
       "id": "bad87fee1348bd9aed108826",
       "title": "Target a Specific Child of an Element Using jQuery",
       "description": [
-        "You've seen why id attributes are so convenient for targeting with jQuery selectors. But you won't always have such neat ids to work with.",
         "你已经知道使用id这个属性来定位在jQuery里有多方便.但是你能总是使用id来定位.",
         "Fortunately, jQuery has some other tricks for targeting the right elements.",
         "幸运的是,jQuery有一个定位正确元素的技巧.",
