@@ -665,7 +665,7 @@
       "description": [
         "现在让我们尝试把元素从一个<code>div</code>移到另外一个.",
         "jQuery有一个<code>appendTo()</code>方法可以把选中的元素加到其他元素中.",
-        "比如,你想让<code>target4</code>从我们的从<code>right-well</code>移到<code>left-well</code>,我们可以这样使用:",
+        "比如,你想让<code>target4</code>从<code>right-well</code>移到<code>left-well</code>,我们可以这样使用:",
         "<code>$(\"#target4\").appendTo(\"#left-well\");</code>",
         "来试着把<code>target2</code>元素从<code>left-well</code>移到<code>right-well</code>中."
       ],
@@ -728,7 +728,7 @@
         "比如,如果我想把<code>target2</code>从<code>left-well</code>拷贝到<code>right-well</code>,我们可以这样写:",
         "<code>$(\"#target2\").clone().appendTo(\"#right-well\");</code>",
         "你有没有发现这让两个jQuery方法合在一起使用了?这叫做<code>function chaining</code>并在这样使用也很方便.",
-        "来尝试复制<code>target5</code>元素"
+        "来尝试复制<code>target5</code>元素吧."
       ],
       "challengeSeed": [
         "fccss",
@@ -786,16 +786,12 @@
       "id": "bad87fee1348bd9aed308826",
       "title": "Target the Parent of an Element Using jQuery",
       "description": [
-        "Every HTML element has a <code>parent</code> element from which it <code>inherits</code> properties.",
-        "所有HTML都有<code>parent</code>元素.",
+        "所有HTML都有<code>parent</code>元素,用来复制属性给子类.",
         "For example, your <code>jQuery Playground</code> <code>h3</code> element has the parent element of <code>&#60;div class=\"container-fluid\"&#62</code>, which itself has the parent <code>body</code>.",
-        "比如,你的<code>jQuery Playground</code><code>h3</code>元素有父类<code>&#60;div class=\"container-fluid\"&#62</code>元素,这个父类元素又<code>body</code>.",
-        "jQuery has a function called <code>parent()</code> that allows you to access the parent of whichever element you've selected.",
+        "比如,你的<code>jQuery Playground</code><code>h3</code>元素有父类<code>&#60;div class=\"container-fluid\"&#62</code>元素,这个父类元素继承了福类<code>body</code>.",
         "jQuery有一个叫作<code>parent()</code>的方法允许你调用你选择的父类.",
-        "Here's an example of how you would use the <code>parent()</code> function if you wanted to give the parent element of the <code>left-well</code> element a background color of blue:",
-        "下面这例子是关于怎么使用<code>parent()</code>方法的,你想把<code>left-well</code>的父类元素背景色改为蓝色:",
+        "下面这例子是关于怎么使用<code>parent()</code>方法的,可以把<code>left-well</code>的父类元素背景色改为蓝色:",
         "<code>$(\"#left-well\").parent().css(\"background-color\", \"blue\")</code>",
-        "Give the parent of the <code>#target1</code> element a background-color of red.",
         "试着把id是<code>#target1</code>的父类元素背景色改为红色吧. "
       ],
       "challengeSeed": [
@@ -858,17 +854,13 @@
       "id": "bad87fee1348bd9aed208826",
       "title": "Target the Children of an Element Using jQuery",
       "description": [
-        "Many HTML elements have <code>children</code> which <code>inherit</code> their properties from their parent HTML elements.",
         "很多HTML元素有<code>children</code>元素,这些子类元素从父类继承属性.",
         "For example, every HTML element is a child of your <code>body</code> element, and your \"jQuery Playground\" <code>h3</code> element is a child of your <code>&#60;div class=\"container-fluid\"&#62</code> element.",
         "比如,所有的HTML元素都有从<code>body</code>继承过来的子类元素,<code>&#60;div class=\"container-fluid\"&#62</code>元素的子类是\"jQuery Playground\" <code>h3</code> 元素.",
-        "jQuery has a function called <code>children()</code> that allows you to access the children of whichever element you've selected.",
         "jQuery<code>children()</code>方法可以获取你选择的子类元素.",
-        "Here's an example of how you would use the <code>children()</code> function to give the children of your <code>left-well</code> element the color of blue:",
         "下面这个例子是你使用<code>children()</code>方法来改变<code>left-well</code>的子类元素为蓝色:",
         "<code>$(\"#left-well\").children().css(\"color\", \"blue\")</code>",
-        "Give all the children of your <code>#right-well</code> element a color of orange.",
-        "试着把所有<code>#right-well</code>的子类元素改完橘黄色吧."
+        "试着把所有<code>#right-well</code>的子类元素改成橘黄色吧."
       ],
       "challengeSeed": [
         "fccss",
@@ -929,13 +921,11 @@
       "title": "Target a Specific Child of an Element Using jQuery",
       "description": [
         "你已经知道使用id这个属性来定位在jQuery里有多方便.但是你能总是使用id来定位.",
-        "Fortunately, jQuery has some other tricks for targeting the right elements.",
         "幸运的是,jQuery有一个定位正确元素的技巧.",
-        "jQuery uses CSS Selectors to target elements. <code>target:nth-child(n)</code> css selector allows you to select all the nth elements with the target class or element type.",
-        "jQuery可以使用CSS选择器来定位元素.<code>target:nth-child(n)</code>css 选择器 ",
-        "Here's how you would give the third element in each well the bounce class:",
+        "jQuery可以使用CSS选择器来定位元素.<code>target:nth-child(n)</code>css这样的方式可以选择所有的目标class或者元素类型. ",
+        "我们是用下面这样的方法来给第三个元素付于弹回clas效果过的:",
         "<code>$(\".target:nth-child(3)\").addClass(\"animated bounce\");</code>",
-        "Make the second child in each of your well elements bounce. You must target the children of element with the <code>target</code> class."
+        "尝试给well的第二个子元素设定弹回效果.必须使用<code>target</code>方法来定位子元素."
       ],
       "challengeSeed": [
         "fccss",
@@ -996,11 +986,11 @@
       "id": "bad87fee1348bd9aed008826",
       "title": "Target Even Numbered Elements Using jQuery",
       "description": [
-        "You can also target all the even-numbered elements.",
-        "Here's how you would target all the odd-numbered elements with class <code>target</code> and give them classes:",
+        "你也可以定位所有的偶数.",
+        "你可以通过<code>target</code>来定位所有的奇数元素:",
         "<code>$(\".target:odd\").addClass(\"animated shake\");</code>",
-        "Note that jQuery is zero-indexed, meaning that, counter-intuitively, <code>:odd</code> selects the second element, fourth element, and so on.",
-        "Try selecting all the even-numbered elements and giving them the classes of <code>animated</code> and <code>shake</code>."
+        "注意jQuery是从零开始的,意思是,<code>:odd</code>选择的是第二个元素,然后是第四个元素,以此类推.",
+        "试着尝试选择所有的偶数元素,然后给这些元素设<code>animated</code> 和 <code>shake</code>效果."
       ],
       "challengeSeed": [
         "fccss",
@@ -1061,11 +1051,10 @@
       "id": "bad87fee1348bd9aecb08826",
       "title": "Use jQuery to Modify the Entire Page",
       "description": [
-        "We're done playing with our jQuery playground. Let's tear it down!",
         "对jQuery的介绍就到这里吧.让我们来玩耍吧!",
-        "jQuery can target the <code>body</code> element as well.",
-        "Here's how we would make the entire body fade out: <code> $(\"body\").addClass(\"animated fadeOut\");</code>",
-        "But let's do something more dramatic. Add the classes <code>animated</code> and <code>hinge</code> to your <code>body</code> element."
+        "jQuery同时也可以定位<code>body</code>的元素.",
+        "我们是这样用下面的方式来让整个body淡出的:<code> $(\"body\").addClass(\"animated fadeOut\");</code>",
+        "但是我们来做一些激动人心的改变吧.来添加<code>animated</code>和<code>hinge</code>到你的<code>body</code>元素吧."
       ],
       "challengeSeed": [
         "fccss",
